@@ -1,10 +1,8 @@
 # Problem Set 8.3
-### Working with the `useContext` and `useReducer`
+### Working with the `useContext` 
 
 ## Directions
-Refactor your Tic-Tac-Toe app with `useContext` and `useReducer`. Your app must meet the following two requirements:
-1. Your app should have a global store to store state using `Context`.
-2. Your app should use `useReducer` to manage state.
+Refactor your Tic-Tac-Toe app. Your app should maintain state with `useContext`.
 
 ### Extra Credit
 * Add a scoreboard.
