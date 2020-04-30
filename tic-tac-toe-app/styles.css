@@ -1,0 +1,21 @@
+.box{
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	border: 2px solid black;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.row{
+  display:flex;
+}
+
+.x-icon{
+  font-size:100px;
+}
+
+.o-icon{
+  font-size:100px;
+}
