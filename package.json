@@ -1,0 +1,19 @@
+{
+  "name": "problem-set-8_3",
+  "version": "1.0.0",
+  "description": "## Directions Refactor your Tic-Tac-Toe app. Your app should maintain state with `useContext`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seal125/problem-set-8_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seal125/problem-set-8_3/issues"
+  },
+  "homepage": "https://github.com/Seal125/problem-set-8_3#readme"
+}
