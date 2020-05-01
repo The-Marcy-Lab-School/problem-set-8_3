@@ -20,7 +20,7 @@ function Board(props) {
       [2, 4, 6]
     ];
 
-    for (let i = 0; i < board[winningConditions.length]; i++) {
+    for (let i = 0; i < winningConditions.length; i++) {
       const [a, b, c] = winningConditions[i];
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         console.log(board);
@@ -33,6 +33,7 @@ function Board(props) {
   }
   const winner = declareWinner(board);
   let status;
+
   if (winner) {
     status = `The winner is ${winner}`;
   }
@@ -41,7 +42,7 @@ function Board(props) {
     // whenever someone clicks a button, they apply a sate to that specific button
     // we can set this state into the boardState and then check if there's a winner
     if (!winner || board[num]) {
-      const updatedBoard = [board];
+      const updatedBoard = [...board];
       updatedBoard[num] = turn;
       setBoard(updatedBoard);
 
@@ -78,12 +79,11 @@ function Board(props) {
 }
 
 function Game() {
-  const { turn } = useContext(BoardContext)
+  const { turn } = useContext(BoardContext);
   return (
     <div>
       <h1>Player {turn}, it's your turn</h1>
       <Board turn={turn}/>
-    
     </div>
   );
 }
