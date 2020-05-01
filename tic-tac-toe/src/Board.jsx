@@ -1,15 +1,9 @@
 import React, {useContext} from 'react';
-import TurnContext from './contexts/PlayerTurns';
-import BoardState from './contexts/BoardContext';
 import Square from './Square';
+import BoardState from './contexts/BoardContext';
 
-const Board = (props) => {
-  // const [boardState, setBoardState] = React.useState([]);
-  let turn = useContext(TurnContext);
-  let boardState = useContext(BoardState);
-  console.log(boardState)
-
-  // const [buttonValue, setButtonValue] = useState('');
+const Board = () => {
+  const {turn, setTurn, boardState, setBoardState} = useContext(BoardState);
 
   const declareWinner = (states) => {
     const conditions = [
@@ -39,22 +33,16 @@ const Board = (props) => {
 
   function handleClick(num) {
     if (!declareWinner(boardState) && !boardState[num]) {
-      boardState[num] = turn;
-      if (turn === 'O') {
-        turn = 'X'
-      }
-      else {
-        turn = 'O'
-      }
-      console.log('ive been clicked, i am ' + boardState[num])
-      console.log(boardState[1])
+      const updatedBoard = [...boardState];
+      updatedBoard[num] = turn;
+      setBoardState(updatedBoard);
+      setTurn((turn === 'O') ? 'X' : 'O');
     }
   }
 
   return (
     <div className='board'>
       <h3>{status}</h3>
-      <BoardState.Provider value={boardState}>
       <div className='row'>
         <Square clickEvent={() => handleClick(0)} value={boardState[0]}/>
         <Square clickEvent={() => handleClick(1)} value={boardState[1]}/>
@@ -70,7 +58,6 @@ const Board = (props) => {
         <Square clickEvent={() => handleClick(7)} value={boardState[7]}/>
         <Square clickEvent={() => handleClick(8)} value={boardState[8]}/>
       </div>
-      </BoardState.Provider>
     </div>
   );
 }

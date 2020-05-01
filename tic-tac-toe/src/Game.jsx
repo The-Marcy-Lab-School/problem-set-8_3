@@ -1,18 +1,14 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import Board from './Board';
-import TurnContext from './contexts/PlayerTurns';
+import BoardContext from './contexts/BoardContext';
 
 const Game = () => {
-  // const [turn, setTurn] = useState('X');
-    const turn = useContext(TurnContext);
-    console.log(turn)
+  const { turn } = useContext(BoardContext);
 
   return (
     <div>
-    <TurnContext.Provider value={turn}>
-      <h2 className='header'>Player {turn}, it's your turn</h2>
-      <Board />
-    </TurnContext.Provider>
+        <h2 className='header'>Player {turn}, it's your turn</h2>
+        <Board />
     </div>
   );
 }

@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-// import {BoardContext} from './contexts/BoardContext';
-// import PlayerTurns from './contexts/PlayerTurns';
+import BoardContextProvider from './contexts/BoardContextProvider';
 import Game from './Game';
 
 function App() {
   return (
 		<div>
 			<h1 className='header'>Tic-Tac-Toe</h1>
-			<Game />
+      <BoardContextProvider>
+			   <Game />
+      </BoardContextProvider>
 		</div>
 	)
 }
