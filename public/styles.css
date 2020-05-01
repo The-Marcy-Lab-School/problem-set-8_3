@@ -1,0 +1,11 @@
+.game-cell {
+  background-color: aliceblue;
+  text-align: center;
+  min-height: 140px;
+  max-height: 30vw;
+  border: 1px dotted red;
+}
+
+.game-cell {
+  width: 10vw;
+}
