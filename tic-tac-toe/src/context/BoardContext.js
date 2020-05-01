@@ -1,9 +1,6 @@
 import React, { createContext } from 'react'
 
 
-const BoardContext = createContext({
-  board: new Array(9).fill(null),
-  setBoardState: () => {},
-})
+const BoardContext = createContext({})
 
 export default BoardContext;
