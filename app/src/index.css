@@ -1,13 +1,20 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .board {
   display: grid;
   width: 600px;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .square {
   height: 200px;
   width: 200px;
   border: 2px solid black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
