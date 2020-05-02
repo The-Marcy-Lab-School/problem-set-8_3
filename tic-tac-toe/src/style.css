@@ -1,0 +1,11 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 624px;
+  margin: auto;
+}
+button {
+  border: 4px black solid;
+  height: 200px;
+  width: 200px
+}
